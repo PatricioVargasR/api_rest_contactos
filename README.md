@@ -22,12 +22,12 @@ Para este ejemplo se utilizará el gestor de bases de datos [SQLite](https://www
 
 ## 4 Script de SQLite
 
-´
+```sql
 CREATE TABLE IF NOT EXISTS  personas(
 	id_contactos INTEGER PRIMARY KEY AUTOINCREMENT,
 	nombre TEXT NOT NULL,
 	primer_apellido TEXT NOT NULL,
 	segundo_apellido TEXT NOT NULL,
-  email TEXT NOT NULL,
+  	email TEXT NOT NULL,
 	email TEXT NOT NULL);
-´
+
