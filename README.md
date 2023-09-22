@@ -20,10 +20,12 @@ Para este ejemplo se utilizará el gestor de bases de datos [SQLite](https://www
 |5|Email|varchar|Not Null|Campo que almacena el correo electronico del contacto|50|
 |6|Teléfono|varchar|Not Null|Campo que almacena el teléfono del contacto|50|
 
-## 4 Script de SQLite
+## 4. Script de SQLite
 
 ```sql
-CREATE TABLE IF NOT EXISTS  personas(
+SELECT 'Script API REST' AS Actividad;
+
+CREATE TABLE IF NOT EXISTS personas(
 	id_contactos INTEGER PRIMARY KEY AUTOINCREMENT,
 	nombre TEXT NOT NULL,
 	primer_apellido TEXT NOT NULL,
