@@ -32,5 +32,12 @@ CREATE TABLE IF NOT EXISTS personas(
 	segundo_apellido TEXT NOT NULL,
   	email TEXT NOT NULL,
 	email TEXT NOT NULL);
-´
+```
 ## 5. Diseño de los métodos
+
+### 5.1 GET - http://localhost:8000/
+|No|Propiedad|Detalle|
+|--|--|--|
+|1|Desciption|Endpoint raíz de la API|
+|2|Summary|Endpoint raíz|
+
