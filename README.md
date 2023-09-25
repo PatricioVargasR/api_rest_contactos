@@ -32,4 +32,5 @@ CREATE TABLE IF NOT EXISTS personas(
 	segundo_apellido TEXT NOT NULL,
   	email TEXT NOT NULL,
 	email TEXT NOT NULL);
-
+´
+## 5. Diseño de los métodos
