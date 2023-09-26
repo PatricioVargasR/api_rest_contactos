@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS personas(
 |1|Description|Endpoint para obtener datos|
 |2|Summary|Endpoint para listar|
 |3|Method|GET|
-|4Endpoint|http://localhost:8000/contactos|
+|4|Endpoint|http://localhost:8000/contactos|
 |5|QueryParam|limit:int, offset:int, nombre:string|
 |6|PathParam|NA|
 |7|DATA|NA|
@@ -79,7 +79,7 @@ CREATE TABLE IF NOT EXISTS personas(
 |1|Description|Endpoint para enviar datos a la API|
 |2|Summary|Endpoint para enviar datos|
 |3|Method|POST|
-|4Endpoint|http://localhost:8000/contactos|
+|4|Endpoint|http://localhost:8000/contactos|
 |5|QueryParam|NA|
 |6|PathParam|NA|
 |7|DATA|{"id_contacto":int, "nombre":string, "apellido_paterno":string}|
