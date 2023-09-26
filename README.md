@@ -41,15 +41,53 @@ CREATE TABLE IF NOT EXISTS personas(
 |1|Description|Endpoint raíz de la API|
 |2|Summary|Endpoint raiz|
 |3|Method|GET|
-|4Endpoint|http://localhost:8000/|
+|4|Endpoint|http://localhost:8000/|
 |5|QueryParam|NA|
 |6|PathParam|NA|
 |7|DATA|NA|
 |8|Versiones|V1|
 |9|Status code|200 ok|
 |10|Response-Type|application/json|
-|11|Response|{"version":"v1","message":"endpoint raiz","datatime":"21/9/27 10:16"}
-|12|Curl|curl -X 'GET' 'http://localhost:8000/' -H 'accept: application/json'
+|11|Response|{"version":"v1","message":"endpoint raiz","datatime":"21/9/23 10:16"}|
+|12|Curl|curl -X 'GET' 'http://localhost:8000/' -H 'accept: application/json'|
 |13|Status code(error)|NA|
 |14|Response Type(error)|NA|
 |15|Response(error)|NA|
+
+### 5.2 GET - http://localhost:8000/contactos
+|No|Propiedad|Detalle|
+|--|--|--|
+|1|Description|Endpoint para obtener datos|
+|2|Summary|Endpoint para listar|
+|3|Method|GET|
+|4Endpoint|http://localhost:8000/contactos|
+|5|QueryParam|limit:int, offset:int, nombre:string|
+|6|PathParam|NA|
+|7|DATA|NA|
+|8|Versiones|V1|
+|9|Status code|200 ok|
+|10|Response-Type|application/json|
+|11|Response|{"version":"v1","message":"Lista de contactos","datatime":"25/9/23 9:36"}|
+|12|Curl|curl -X 'GET' 'http://localhost:8000/?limit=10&offset=0&nombre=Juan' -H 'accept: application/json'|
+|13|Status code(error)|400|
+|14|Response Type(error)|application/json|
+|15|Response(error)|{"version":"v1","message-error":"<ocurrió un error","datatime":"21/9/27 10:16"}|
+
+### 5.3 POST - http://localhost:8000/contactos
+|No|Propiedad|Detalle|
+|--|--|--|
+|1|Description|Endpoint para enviar datos a la API|
+|2|Summary|Endpoint para enviar datos|
+|3|Method|POST|
+|4Endpoint|http://localhost:8000/contactos|
+|5|QueryParam|NA|
+|6|PathParam|NA|
+|7|DATA|{"id_contacto":int, "nombre":string, "apellido_paterno":string}|
+|8|Versiones|V1|
+|9|Status code|200 ok|
+|10|Response-Type|application/json|
+|11|Response|{"version":"v1","message":"Lista de contactos","datatime":"25/9/23 9:36"}|
+|12|Curl|curl -X 'GET' 'http://localhost:8000/?limit=10&offset=0&nombre=Juan' -H 'accept: application/json'|
+|13|Status code(error)|400|
+|14|Response Type(error)|application/json|
+|15|Response(error)|{"version":"v1","message-error":"ocurrió un error","datatime":"21/9/27 10:16"}|
