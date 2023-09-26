@@ -82,12 +82,50 @@ CREATE TABLE IF NOT EXISTS personas(
 |4|Endpoint|http://localhost:8000/contactos|
 |5|QueryParam|NA|
 |6|PathParam|NA|
-|7|DATA|{"id_contacto":int, "nombre":string, "apellido_paterno":string}|
+|7|DATA|{"id_contacto":int, "nombre":string, "apellido_paterno":string, "apellido_materno":string, "email":string, "telefono":string}|
 |8|Versiones|V1|
-|9|Status code|200 ok|
+|9|Status code|201 Created|
 |10|Response-Type|application/json|
 |11|Response|{"version":"v1","message":"Lista de contactos","datatime":"25/9/23 9:36"}|
-|12|Curl|curl -X 'GET' 'http://localhost:8000/?limit=10&offset=0&nombre=Juan' -H 'accept: application/json'|
-|13|Status code(error)|400|
+|12|Curl|curl -X 'POST' 'http://localhost:8000/contactos' -H 'accept: application/json' -d '{"id_contacto":int, "nombre":string, "apellido_paterno":string, "apellido_materno":string, "email":string, "telefono":string}'|
+|13|Status code(error)|400 Bad Request|
 |14|Response Type(error)|application/json|
 |15|Response(error)|{"version":"v1","message-error":"ocurrió un error","datatime":"21/9/27 10:16"}|
+
+### 5.4 DELETE - http://localhost:8000/contactos/?id_contacto=
+|No|Propiedad|Detalle|
+|--|--|--|
+|1|Description|Endpoint para eliminar un recurso de la API|
+|2|Summary|Endpoint para eliminar un recurso|
+|3|Method|DELETE|
+|4|Endpoint|http://localhost:8000/contactos/?id_contacto=|
+|5|QueryParam|id_contacto|
+|6|PathParam|NA|
+|7|DATA|NA|
+|8|Versiones|V1|
+|9|Status code|204 No Content|
+|10|Response-Type|application/json|
+|11|Response|{"version":"v1","message":"Se eliminó con éxito","datatime":"25/9/23 9:36"}|
+|12|Curl|curl -X 'DELETE' 'http://localhost:8000/?id_contacto=1' -H 'accept: application/json'|
+|13|Status code(error)|400 Bad Request|
+|14|Response Type(error)|application/json|
+|15|Response(error)|{"version":"v1","message-error":"ocurrió un error al eliminar","datatime":"21/9/27 10:16"}|
+
+### 5.5 PUT - http://localhost:8000/contactos/?id_contactos=
+|No|Propiedad|Detalle|
+|--|--|--|
+|1|Description|Endpoint para actualizar recursos de la API|
+|2|Summary|Endpoint para actulizar datos|
+|3|Method|PUT|
+|4|Endpoint|http://localhost:8000/contactos/?id_contacto=|
+|5|QueryParam|id_contacto|
+|6|PathParam|NA|
+|7|DATA|NA|
+|8|Versiones|V1|
+|9|Status code|200 Ok|
+|10|Response-Type|application/json|
+|11|Response|{"version":"v1","message":"Actualizado con éxito","datatime":"25/9/23 9:36"}|
+|12|Curl|curl -X 'DELETE' 'http://localhost:8000/?id_contacto=1' -H 'accept: application/json'|
+|13|Status code(error)|400 Bad Request|
+|14|Response Type(error)|application/json|
+|15|Response(error)|{"version":"v1","message-error":"ocurrió un error al actualizar","datatime":"21/9/27 10:16"}|
