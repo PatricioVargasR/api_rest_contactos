@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS personas(
 |12|Curl|curl -X 'GET' 'http://localhost:8000/?limit=10&offset=0&nombre=Juan' -H 'accept: application/json'|
 |13|Status code(error)|400|
 |14|Response Type(error)|application/json|
-|15|Response(error)|{"version":"v1","message-error":"<ocurrió un error","datatime":"21/9/27 10:16"}|
+|15|Response(error)|{"version":"v1","message-error":"ocurrió un error","datatime":"21/9/27 10:16"}|
 
 ### 5.3 POST - http://localhost:8000/contactos
 |No|Propiedad|Detalle|
